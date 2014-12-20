@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{196D7711-5DF2-4118-8D0D-DAD0CCFA1C3B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Argentiere.PATrading.WebApp</RootNamespace>
+    <AssemblyName>Argentiere.PATrading.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".\app\manifest.appcache">
+      <Link>manifest.appcache</Link>
+    </Content>
+    <Content Include=".\app\index.html">
+      <Link>index.html</Link>
+    </Content>
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\.bower.json" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\bower.json" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\package.json" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\README.md" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\.bower.json" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\angular-animate.min.js.map" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\bower.json" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\README.md" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\.bower.json" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\.editorconfig" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\bower.json" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\README.md" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\.bower.json" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\bower.json" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\package.json" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\README.md" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\.bower.json" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\bower.json" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\CHANGELOG.md" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\LICENSE" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\package.json" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\README.md" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\.bower.json" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\bower.json" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\.bower.json" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\bower.json" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\LICENSE" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\.bower.json" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\bower.json" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\CHANGELOG.md" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\LICENSE" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\README.md" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\font\fontawesome-webfont.eot" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\font\fontawesome-webfont.ttf" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\font\fontawesome-webfont.woff" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\font\FontAwesome.otf" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\.bower.json" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\bower.json" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\package.json" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\README.md" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\.bower.json" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_button.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_clearfix.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_font-family.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_hide-text.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_html5-input-types.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_position.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_prefixer.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_retina-image.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_size.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_timing-functions.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\addons\_triangle.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_animation.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_appearance.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_backface-visibility.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_background-image.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_background.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_border-image.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_border-radius.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_box-sizing.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_columns.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_flex-box.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_font-face.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_hidpi-media-query.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_image-rendering.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_inline-block.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_keyframes.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_linear-gradient.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_perspective.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_placeholder.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_radial-gradient.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_transform.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_transition.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\css3\_user-select.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_compact.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_flex-grid.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_grid-width.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_linear-gradient.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_modular-scale.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_px-to-em.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_radial-gradient.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_tint-shade.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\functions\_transition-property-name.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_deprecated-webkit-gradient.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_gradient-positions-parser.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_linear-positions-parser.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_radial-arg-parser.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_radial-positions-parser.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_render-gradients.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\helpers\_shape-size-stripper.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\_bourbon-deprecated-upcoming.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\app\assets\stylesheets\_bourbon.scss" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\bin\bourbon" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\bourbon.gemspec" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\install.feature" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\step_definitions\bourbon_steps.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\support\bourbon_support.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\support\env.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\update.feature" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\features\version.feature" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\Gemfile" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\Gemfile.lock" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\lib\bourbon.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\lib\bourbon\engine.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\lib\bourbon\generator.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\lib\bourbon\version.rb" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\lib\tasks\install.rake" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\LICENSE" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\Rakefile" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\readme.md" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\.bower.json" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\.travis.yml" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\bower.json" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\CHANGELOG.md" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\CONTRIBUTE.md" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\dist\restangular.zip" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\license.md" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\package.json" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\README.md" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\.bower.json" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\angular-cookies.min.js.map" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\bower.json" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\package.json" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\README.md" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\.bower.json" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\angular-touch.min.js.map" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\bower.json" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\package.json" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\README.md" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\.bower.json" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\bower.json" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\package.json" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\README.md" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\.bower.json" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\bower.json" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\contributing.md" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\package.json" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\README.md" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\.bower.json" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\angular-sanitize.min.js.map" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\bower.json" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\package.json" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\README.md" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\.bower.json" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\.bowerrc" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\bower.json" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\CHANGELOG.md" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\LICENSE" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\package.json" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\README.md" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\.bower.json" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\bower.json" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\.bower.json" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\angular-resource.min.js.map" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\bower.json" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\package.json" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\README.md" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\.bower.json" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\bower.json" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\package.json" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\README.md" />
+    <Content Include=".bower-cache\e9f8053314f992cbc734f1d338e7339c\1.3.7\.bower.json" />
+    <Content Include=".bower-cache\e9f8053314f992cbc734f1d338e7339c\1.3.7\bower.json" />
+    <Content Include=".bower-cache\e9f8053314f992cbc734f1d338e7339c\1.3.7\package.json" />
+    <Content Include=".bower-cache\e9f8053314f992cbc734f1d338e7339c\1.3.7\README.md" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\.bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\angular.min.js.gzip" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\angular.min.js.map" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\package.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\README.md" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\.bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\angular.min.js.gzip" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\angular.min.js.map" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\README.md" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\.bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\angular.min.js.gzip" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\angular.min.js.map" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\bower.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\package.json" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\README.md" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\adal-angular_bd593" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-animate_13c7e" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-busy_c1b76" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-component-factory_4d630" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-cookies_faa92" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-loading-bar_619f9" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-mocks_f6200" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-promise-tracker_c3793" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-resource_45e37" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-sanitize_2e0df" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-touch_84123" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-ui-bootstrap-bower_d327a" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular-ui-router_8d538" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\angular_d18b8" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\bourbon_25c97" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\lodash_3db3d" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\ng-symbiosis-model_950d5" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\ng-symbiosis-repository_fc8b0" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\ng-symbiosis-routeprovider_86081" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\ng-symbiosis-utils_ad2ed" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\ngstorage_a8bd7" />
+    <Content Include=".bower-registry\bower.herokuapp.com\lookup\restangular_0e225" />
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="app\.buildignore" />
+    <Content Include="app\.htaccess" />
+    <Content Include="app\assets\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="app\assets\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="app\assets\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="app\assets\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="app\assets\fonts\open-sans-bold.woff" />
+    <Content Include="app\assets\fonts\open-sans-italic-light.woff" />
+    <Content Include="app\assets\fonts\open-sans-italic.woff" />
+    <Content Include="app\assets\fonts\open-sans-light.woff" />
+    <Content Include="app\assets\fonts\open-sans-semibold.woff" />
+    <Content Include="app\assets\fonts\open-sans.woff" />
+    <Content Include="app\bower_components\adal-angular\.bower.json" />
+    <Content Include="app\bower_components\adal-angular\bower.json" />
+    <Content Include="app\bower_components\adal-angular\contributing.md" />
+    <Content Include="app\bower_components\adal-angular\package.json" />
+    <Content Include="app\bower_components\adal-angular\README.md" />
+    <Content Include="app\bower_components\angular-animate\.bower.json" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js.map" />
+    <Content Include="app\bower_components\angular-animate\bower.json" />
+    <Content Include="app\bower_components\angular-animate\README.md" />
+    <Content Include="app\bower_components\angular-busy\.bower.json" />
+    <Content Include="app\bower_components\angular-busy\bower.json" />
+    <Content Include="app\bower_components\angular-busy\LICENSE" />
+    <Content Include="app\bower_components\angular-component-factory\.bower.json" />
+    <Content Include="app\bower_components\angular-component-factory\bower.json" />
+    <Content Include="app\bower_components\angular-component-factory\package.json" />
+    <Content Include="app\bower_components\angular-component-factory\README.md" />
+    <Content Include="app\bower_components\angular-cookies\.bower.json" />
+    <Content Include="app\bower_components\angular-cookies\angular-cookies.min.js.map" />
+    <Content Include="app\bower_components\angular-cookies\bower.json" />
+    <Content Include="app\bower_components\angular-cookies\package.json" />
+    <Content Include="app\bower_components\angular-cookies\README.md" />
+    <Content Include="app\bower_components\angular-loading-bar\.bower.json" />
+    <Content Include="app\bower_components\angular-loading-bar\bower.json" />
+    <Content Include="app\bower_components\angular-loading-bar\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-loading-bar\LICENSE" />
+    <Content Include="app\bower_components\angular-loading-bar\package.json" />
+    <Content Include="app\bower_components\angular-loading-bar\README.md" />
+    <Content Include="app\bower_components\angular-mocks\.bower.json" />
+    <Content Include="app\bower_components\angular-mocks\bower.json" />
+    <Content Include="app\bower_components\angular-mocks\package.json" />
+    <Content Include="app\bower_components\angular-mocks\README.md" />
+    <Content Include="app\bower_components\angular-promise-tracker\.bower.json" />
+    <Content Include="app\bower_components\angular-promise-tracker\.editorconfig" />
+    <Content Include="app\bower_components\angular-promise-tracker\bower.json" />
+    <Content Include="app\bower_components\angular-promise-tracker\README.md" />
+    <Content Include="app\bower_components\angular-resource\.bower.json" />
+    <Content Include="app\bower_components\angular-resource\angular-resource.min.js.map" />
+    <Content Include="app\bower_components\angular-resource\bower.json" />
+    <Content Include="app\bower_components\angular-resource\package.json" />
+    <Content Include="app\bower_components\angular-resource\README.md" />
+    <Content Include="app\bower_components\angular-sanitize\.bower.json" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="app\bower_components\angular-sanitize\bower.json" />
+    <Content Include="app\bower_components\angular-sanitize\package.json" />
+    <Content Include="app\bower_components\angular-sanitize\README.md" />
+    <Content Include="app\bower_components\angular-touch\.bower.json" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.min.js.map" />
+    <Content Include="app\bower_components\angular-touch\bower.json" />
+    <Content Include="app\bower_components\angular-touch\package.json" />
+    <Content Include="app\bower_components\angular-touch\README.md" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\.bower.json" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\.bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-ui-router\LICENSE" />
+    <Content Include="app\bower_components\angular-ui-router\README.md" />
+    <Content Include="app\bower_components\angular-ui-router\site\font\fontawesome-webfont.eot" />
+    <Content Include="app\bower_components\angular-ui-router\site\font\fontawesome-webfont.ttf" />
+    <Content Include="app\bower_components\angular-ui-router\site\font\fontawesome-webfont.woff" />
+    <Content Include="app\bower_components\angular-ui-router\site\font\FontAwesome.otf" />
+    <Content Include="app\bower_components\angular\.bower.json" />
+    <Content Include="app\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="app\bower_components\angular\angular.min.js.map" />
+    <Content Include="app\bower_components\angular\bower.json" />
+    <Content Include="app\bower_components\angular\package.json" />
+    <Content Include="app\bower_components\angular\README.md" />
+    <Content Include="app\bower_components\bourbon\.bower.json" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_button.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_clearfix.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_font-family.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_hide-text.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_html5-input-types.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_position.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_prefixer.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_retina-image.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_size.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_timing-functions.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\addons\_triangle.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_animation.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_appearance.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_backface-visibility.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_background-image.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_background.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_border-image.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_border-radius.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_box-sizing.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_columns.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_flex-box.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_font-face.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_hidpi-media-query.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_image-rendering.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_inline-block.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_keyframes.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_linear-gradient.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_perspective.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_placeholder.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_radial-gradient.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_transform.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_transition.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\css3\_user-select.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_compact.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_flex-grid.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_grid-width.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_linear-gradient.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_modular-scale.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_px-to-em.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_radial-gradient.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_tint-shade.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\functions\_transition-property-name.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_deprecated-webkit-gradient.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_gradient-positions-parser.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_linear-positions-parser.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_radial-arg-parser.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_radial-positions-parser.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_render-gradients.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\helpers\_shape-size-stripper.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\_bourbon-deprecated-upcoming.scss" />
+    <Content Include="app\bower_components\bourbon\app\assets\stylesheets\_bourbon.scss" />
+    <Content Include="app\bower_components\bourbon\bin\bourbon" />
+    <Content Include="app\bower_components\bourbon\bourbon.gemspec" />
+    <Content Include="app\bower_components\bourbon\features\install.feature" />
+    <Content Include="app\bower_components\bourbon\features\step_definitions\bourbon_steps.rb" />
+    <Content Include="app\bower_components\bourbon\features\support\bourbon_support.rb" />
+    <Content Include="app\bower_components\bourbon\features\support\env.rb" />
+    <Content Include="app\bower_components\bourbon\features\update.feature" />
+    <Content Include="app\bower_components\bourbon\features\version.feature" />
+    <Content Include="app\bower_components\bourbon\Gemfile" />
+    <Content Include="app\bower_components\bourbon\Gemfile.lock" />
+    <Content Include="app\bower_components\bourbon\lib\bourbon.rb" />
+    <Content Include="app\bower_components\bourbon\lib\bourbon\engine.rb" />
+    <Content Include="app\bower_components\bourbon\lib\bourbon\generator.rb" />
+    <Content Include="app\bower_components\bourbon\lib\bourbon\version.rb" />
+    <Content Include="app\bower_components\bourbon\lib\tasks\install.rake" />
+    <Content Include="app\bower_components\bourbon\LICENSE" />
+    <Content Include="app\bower_components\bourbon\Rakefile" />
+    <Content Include="app\bower_components\bourbon\readme.md" />
+    <Content Include="app\bower_components\lodash\.bower.json" />
+    <Content Include="app\bower_components\lodash\bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-model\.bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-model\bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-model\package.json" />
+    <Content Include="app\bower_components\ng-symbiosis-model\README.md" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\.bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\package.json" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\README.md" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\.bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\package.json" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\README.md" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\.bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\bower.json" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\package.json" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\README.md" />
+    <Content Include="app\bower_components\ngstorage\.bower.json" />
+    <Content Include="app\bower_components\ngstorage\.bowerrc" />
+    <Content Include="app\bower_components\ngstorage\bower.json" />
+    <Content Include="app\bower_components\ngstorage\CHANGELOG.md" />
+    <Content Include="app\bower_components\ngstorage\LICENSE" />
+    <Content Include="app\bower_components\ngstorage\package.json" />
+    <Content Include="app\bower_components\ngstorage\README.md" />
+    <Content Include="app\bower_components\restangular\.bower.json" />
+    <Content Include="app\bower_components\restangular\.travis.yml" />
+    <Content Include="app\bower_components\restangular\bower.json" />
+    <Content Include="app\bower_components\restangular\CHANGELOG.md" />
+    <Content Include="app\bower_components\restangular\CONTRIBUTE.md" />
+    <Content Include="app\bower_components\restangular\dist\restangular.zip" />
+    <Content Include="app\bower_components\restangular\license.md" />
+    <Content Include="app\bower_components\restangular\package.json" />
+    <Content Include="app\bower_components\restangular\README.md" />
+    <Content Include="app\components\adal-authentication\adal-authentication.html" />
+    <Content Include="app\components\adal-authentication\adal-authentication.js" />
+    <Content Include="app\components\navbar\_navbar.scss" />
+    <Content Include="app\dev\my-test-mock.json" />
+    <Content Include="app\dev\request-mock.json" />
+    <Content Include="app\package.json" />
+    <Content Include="app\states\error\index\_error-index-state.scss" />
+    <Content Include="app\states\index\index\_index-index-state.scss" />
+    <Content Include="app\states\request\index\_request-state.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_alerts.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_badges.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_breadcrumbs.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_button-groups.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_buttons.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_carousel.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_close.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_code.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_component-animations.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_dropdowns.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_forms.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_glyphicons.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_grid.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_input-groups.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_jumbotron.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_labels.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_list-group.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_media.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_mixins.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_modals.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_navbar.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_navs.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_normalize.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_pager.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_pagination.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_panels.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_popovers.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_print.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_progress-bars.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_responsive-utilities.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_scaffolding.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_tables.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_theme.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_thumbnails.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_tooltip.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_type.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_utilities.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_variables.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\bootstrap\_wells.scss" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\stylesheets\_bootstrap.scss" />
+    <Content Include="app\styles\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="app\styles\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="app\styles\_angular-busy.scss" />
+    <Content Include="app\styles\_angular-xeditable.scss" />
+    <Content Include="app\styles\_animations.scss" />
+    <Content Include="app\styles\_components.scss" />
+    <Content Include="app\styles\_config.scss" />
+    <Content Include="app\styles\_font.scss" />
+    <Content Include="app\styles\_globals.scss" />
+    <Content Include="app\styles\_loading-bar.scss" />
+    <Content Include="app\styles\_site-loading.scss" />
+    <Content Include="app\styles\_states.scss" />
+    <Content Include="bin\Argentiere.PATrading.WebApp.dll.config" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="index.html" />
+    <Content Include="karma.conf.js" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="test\.jshintrc" />
+    <Content Include="test\unit\mock\.gitkeep" />
+    <Content Include=".bowerrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".jshintrc" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="resources.json" />
+    <Content Include="app\styles\_bootswatch.scss" />
+    <Content Include="app\styles\_variables.scss" />
+    <Content Include="app\styles\main.scss" />
+    <Content Include="app\styles\main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="app\components\adal-authentication\_adal-authentication.scss" />
+    <Content Include="app\manifest.appcache" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\Gruntfile.js" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\karma.conf.js" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\ng-symbiosis-repository.min.js" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\ng-symbiosis-repository.src.js" />
+    <Content Include=".bower-cache\13babe646492a5f9caca99afafbb666c\0.0.2\ng-symbiosis-repository.test.js" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\angular-animate.js" />
+    <Content Include=".bower-cache\1e5d36753a7672512aa68fc8cdf5a6ce\1.3.0-build.3121%252Bsha.a4520a7\angular-animate.min.js" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\.gitignore" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\promise-tracker.js" />
+    <Content Include=".bower-cache\2d5cb49450906e0f384d220bd27af2f6\1.5.1\promise-tracker.min.js" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\Gruntfile.js" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\karma.conf.js" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\ng-symbiosis-routeprovider.min.js" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\ng-symbiosis-routeprovider.src.js" />
+    <Content Include=".bower-cache\323900ff14ae30c523d08381d8dcd8b8\0.1.1\ng-symbiosis-routeprovider.test.js" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\build\loading-bar.css" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\build\loading-bar.js" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\build\loading-bar.min.css" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\build\loading-bar.min.js" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\Gruntfile.js" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\src\loading-bar.css" />
+    <Content Include=".bower-cache\40ab3992449b5873379928f58ae5889b\0.6.0\src\loading-bar.js" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\ui-bootstrap-tpls.js" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\ui-bootstrap-tpls.min.js" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\ui-bootstrap.js" />
+    <Content Include=".bower-cache\4fb30846af9d14960a8cdb35aa9f8f19\0.9.0\ui-bootstrap.min.js" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\angular-busy.css" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\angular-busy.html" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\angular-busy.js" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\dist\angular-busy.css" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\dist\angular-busy.js" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\dist\angular-busy.min.css" />
+    <Content Include=".bower-cache\4fc3ff1305e93eb50cf2ecb3e753b642\4.1.2\dist\angular-busy.min.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\files.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\Gruntfile.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\release\angular-ui-router.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\release\angular-ui-router.min.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\css\animations.css" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\css\bootstrap.min.css" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\css\docs.css" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\css\doc_widgets.css" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\css\font-awesome.css" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\favicon.ico" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\font\fontawesome-webfont.svg" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\index.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\js\angular-bootstrap-prettify.min.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\js\angular-bootstrap.min.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\js\angular.min.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\js\docs-setup.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\js\docs.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.compat.%24route.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.compat.%24routeProvider.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.compat.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.router.%24urlRouter.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.router.%24urlRouterProvider.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.router.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.%24state.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.%24stateProvider.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.%24uiViewScroll.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.%24view.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.directive.ui-sref-active.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.directive.ui-sref.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.diretive.ui-view.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.filter.includeByState.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.state.filter.isState.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.util.%24resolve.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.util.%24templateFactory.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\site\partials\api\ui.router.util.html" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\common.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\compat.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\resolve.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\state.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\stateDirectives.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\stateFilters.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\templateFactory.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\urlMatcherFactory.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\urlRouter.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\view.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\viewDirective.js" />
+    <Content Include=".bower-cache\62c903e33a8a6ef032774d5ca73673d9\0.2.8-bowratic-tedium\src\viewScroll.js" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\Gruntfile.js" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\karma.conf.js" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\ng-symbiosis-model.min.js" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\ng-symbiosis-model.src.js" />
+    <Content Include=".bower-cache\6a54f8189ccd2331f3c5f9e2e719926a\0.0.2\ng-symbiosis-model.test.js" />
+    <Content Include=".bower-cache\6a8ff25945bfd4209ef80b7b1273fbcf\3.1.8\.gitignore" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\.gitignore" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\dist\restangular.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\dist\restangular.min.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\Gruntfile.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\karma.conf.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\karma.underscore.conf.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\src\restangular.js" />
+    <Content Include=".bower-cache\6f088232557d814cf6d6576c2527fa36\1.1.9\test\restangularSpec.js" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\angular-cookies.js" />
+    <Content Include=".bower-cache\87323d6d4e48be291a9616a033d4cc6c\1.2.28\angular-cookies.min.js" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\angular-touch.js" />
+    <Content Include=".bower-cache\8926838ac25d624594e3d6618381d070\1.2.28\angular-touch.min.js" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\angular-component-factory.js" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\angular-component-factory.min.js" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\angular-component-factory.test.js" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\demo.html" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\Gruntfile.js" />
+    <Content Include=".bower-cache\8f71946e8de09c763c77f30a1612e553\1.3.1\karma.conf.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\changelog.txt" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\dist\adal-angular.min.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\dist\adal.min.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\Gruntfile.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\karma.conf.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\lib\adal-angular.js" />
+    <Content Include=".bower-cache\993c30fc43cc60adfb09a215dd3b11d7\0.0.4\lib\adal.js" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\angular-sanitize.js" />
+    <Content Include=".bower-cache\9eaed103d6a7e78d91f673cfad796850\1.2.28\angular-sanitize.min.js" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\.gitignore" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\Gruntfile.js" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\ngStorage.js" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\ngStorage.min.js" />
+    <Content Include=".bower-cache\9ff0a7f5225539b6a0b0944d1002af1b\0.3.0\test\spec.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.compat.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.compat.min.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.min.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.underscore.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\dist\lodash.underscore.min.js" />
+    <Content Include=".bower-cache\cc6d3adf8c2a36f7b163cc9479c3829c\2.4.1\LICENSE.txt" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\angular-resource.js" />
+    <Content Include=".bower-cache\d751baf3abe66bad059ba9b95cbb13a6\1.2.28\angular-resource.min.js" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\Gruntfile.js" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\karma.conf.js" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\ng-symbiosis-utils.min.js" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\ng-symbiosis-utils.src.js" />
+    <Content Include=".bower-cache\e917b6fdb153898eefcc6c20a6ee3d14\0.0.4\ng-symbiosis-utils.test.js" />
+    <Content Include=".bower-cache\e9f8053314f992cbc734f1d338e7339c\1.3.7\angular-mocks.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\angular-csp.css" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\angular.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.2.28\angular.min.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\angular-csp.css" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\angular.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.0-build.3121%252Bsha.a4520a7\angular.min.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\angular-csp.css" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\angular.js" />
+    <Content Include=".bower-cache\ef2188def21eb1bbd1f1792311942a53\1.3.7\angular.min.js" />
+    <Content Include="app\assets\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="app\assets\images\site-loading.gif" />
+    <Content Include="app\assets\images\tumbeast\404.png" />
+    <Content Include="app\assets\images\tumbeast\custom-error.png" />
+    <Content Include="app\assets\images\tumbeast\tbrun1.png" />
+    <Content Include="app\assets\images\tumbeast\tbrun2.png" />
+    <Content Include="app\assets\images\tumbeast\tbservers.png" />
+    <Content Include="app\assets\images\tumbeast\tbsit2.png" />
+    <Content Include="app\bower_components\adal-angular\changelog.txt" />
+    <Content Include="app\bower_components\adal-angular\dist\adal-angular.min.js" />
+    <Content Include="app\bower_components\adal-angular\dist\adal.min.js" />
+    <Content Include="app\bower_components\adal-angular\Gruntfile.js" />
+    <Content Include="app\bower_components\adal-angular\karma.conf.js" />
+    <Content Include="app\bower_components\adal-angular\lib\adal-angular.js" />
+    <Content Include="app\bower_components\adal-angular\lib\adal.js" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.js" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js" />
+    <Content Include="app\bower_components\angular-busy\angular-busy.css" />
+    <Content Include="app\bower_components\angular-busy\angular-busy.html" />
+    <Content Include="app\bower_components\angular-busy\angular-busy.js" />
+    <Content Include="app\bower_components\angular-busy\dist\angular-busy.css" />
+    <Content Include="app\bower_components\angular-busy\dist\angular-busy.js" />
+    <Content Include="app\bower_components\angular-busy\dist\angular-busy.min.css" />
+    <Content Include="app\bower_components\angular-busy\dist\angular-busy.min.js" />
+    <Content Include="app\bower_components\angular-component-factory\angular-component-factory.js" />
+    <Content Include="app\bower_components\angular-component-factory\angular-component-factory.min.js" />
+    <Content Include="app\bower_components\angular-component-factory\angular-component-factory.test.js" />
+    <Content Include="app\bower_components\angular-component-factory\demo.html" />
+    <Content Include="app\bower_components\angular-component-factory\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-component-factory\karma.conf.js" />
+    <Content Include="app\bower_components\angular-cookies\angular-cookies.js" />
+    <Content Include="app\bower_components\angular-cookies\angular-cookies.min.js" />
+    <Content Include="app\bower_components\angular-loading-bar\build\loading-bar.css" />
+    <Content Include="app\bower_components\angular-loading-bar\build\loading-bar.js" />
+    <Content Include="app\bower_components\angular-loading-bar\build\loading-bar.min.css" />
+    <Content Include="app\bower_components\angular-loading-bar\build\loading-bar.min.js" />
+    <Content Include="app\bower_components\angular-loading-bar\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-loading-bar\src\loading-bar.css" />
+    <Content Include="app\bower_components\angular-loading-bar\src\loading-bar.js" />
+    <Content Include="app\bower_components\angular-mocks\angular-mocks.js" />
+    <Content Include="app\bower_components\angular-promise-tracker\.gitignore" />
+    <Content Include="app\bower_components\angular-promise-tracker\promise-tracker.js" />
+    <Content Include="app\bower_components\angular-promise-tracker\promise-tracker.min.js" />
+    <Content Include="app\bower_components\angular-resource\angular-resource.js" />
+    <Content Include="app\bower_components\angular-resource\angular-resource.min.js" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.js" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.min.js" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\ui-bootstrap-tpls.js" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\ui-bootstrap-tpls.min.js" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\ui-bootstrap.js" />
+    <Content Include="app\bower_components\angular-ui-bootstrap-bower\ui-bootstrap.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\files.js" />
+    <Content Include="app\bower_components\angular-ui-router\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\css\animations.css" />
+    <Content Include="app\bower_components\angular-ui-router\site\css\bootstrap.min.css" />
+    <Content Include="app\bower_components\angular-ui-router\site\css\docs.css" />
+    <Content Include="app\bower_components\angular-ui-router\site\css\doc_widgets.css" />
+    <Content Include="app\bower_components\angular-ui-router\site\css\font-awesome.css" />
+    <Content Include="app\bower_components\angular-ui-router\site\favicon.ico" />
+    <Content Include="app\bower_components\angular-ui-router\site\font\fontawesome-webfont.svg" />
+    <Content Include="app\bower_components\angular-ui-router\site\index.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\js\angular-bootstrap-prettify.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\js\angular-bootstrap.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\js\angular.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\js\docs-setup.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\js\docs.js" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.compat.%24route.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.compat.%24routeProvider.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.compat.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.router.%24urlRouter.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.router.%24urlRouterProvider.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.router.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.%24state.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.%24stateProvider.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.%24uiViewScroll.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.%24view.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.directive.ui-sref-active.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.directive.ui-sref.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.diretive.ui-view.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.filter.includeByState.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.state.filter.isState.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.util.%24resolve.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.util.%24templateFactory.html" />
+    <Content Include="app\bower_components\angular-ui-router\site\partials\api\ui.router.util.html" />
+    <Content Include="app\bower_components\angular-ui-router\src\common.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\compat.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\resolve.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\state.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateFilters.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\templateFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlRouter.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\view.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewDirective.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewScroll.js" />
+    <Content Include="app\bower_components\angular\angular-csp.css" />
+    <Content Include="app\bower_components\angular\angular.js" />
+    <Content Include="app\bower_components\angular\angular.min.js" />
+    <Content Include="app\bower_components\bourbon\.gitignore" />
+    <Content Include="app\bower_components\lodash\dist\lodash.compat.js" />
+    <Content Include="app\bower_components\lodash\dist\lodash.compat.min.js" />
+    <Content Include="app\bower_components\lodash\dist\lodash.js" />
+    <Content Include="app\bower_components\lodash\dist\lodash.min.js" />
+    <Content Include="app\bower_components\lodash\dist\lodash.underscore.js" />
+    <Content Include="app\bower_components\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="app\bower_components\lodash\LICENSE.txt" />
+    <Content Include="app\bower_components\ng-symbiosis-model\Gruntfile.js" />
+    <Content Include="app\bower_components\ng-symbiosis-model\karma.conf.js" />
+    <Content Include="app\bower_components\ng-symbiosis-model\ng-symbiosis-model.min.js" />
+    <Content Include="app\bower_components\ng-symbiosis-model\ng-symbiosis-model.src.js" />
+    <Content Include="app\bower_components\ng-symbiosis-model\ng-symbiosis-model.test.js" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\Gruntfile.js" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\karma.conf.js" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\ng-symbiosis-repository.min.js" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\ng-symbiosis-repository.src.js" />
+    <Content Include="app\bower_components\ng-symbiosis-repository\ng-symbiosis-repository.test.js" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\Gruntfile.js" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\karma.conf.js" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\ng-symbiosis-routeprovider.min.js" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\ng-symbiosis-routeprovider.src.js" />
+    <Content Include="app\bower_components\ng-symbiosis-routeprovider\ng-symbiosis-routeprovider.test.js" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\Gruntfile.js" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\karma.conf.js" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\ng-symbiosis-utils.min.js" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\ng-symbiosis-utils.src.js" />
+    <Content Include="app\bower_components\ng-symbiosis-utils\ng-symbiosis-utils.test.js" />
+    <Content Include="app\bower_components\ngstorage\.gitignore" />
+    <Content Include="app\bower_components\ngstorage\Gruntfile.js" />
+    <Content Include="app\bower_components\ngstorage\ngStorage.js" />
+    <Content Include="app\bower_components\ngstorage\ngStorage.min.js" />
+    <Content Include="app\bower_components\ngstorage\test\spec.js" />
+    <Content Include="app\bower_components\restangular\.gitignore" />
+    <Content Include="app\bower_components\restangular\dist\restangular.js" />
+    <Content Include="app\bower_components\restangular\dist\restangular.min.js" />
+    <Content Include="app\bower_components\restangular\Gruntfile.js" />
+    <Content Include="app\bower_components\restangular\karma.conf.js" />
+    <Content Include="app\bower_components\restangular\karma.underscore.conf.js" />
+    <Content Include="app\bower_components\restangular\src\restangular.js" />
+    <Content Include="app\bower_components\restangular\test\restangularSpec.js" />
+    <Content Include="app\components\navbar\navbar.html" />
+    <Content Include="app\components\navbar\navbar.js" />
+    <Content Include="app\config\config.js" />
+    <Content Include="app\config\routes.js" />
+    <Content Include="app\dev\mock-api.js" />
+    <Content Include="app\dev\my-test-mock.js" />
+    <Content Include="app\dev\request-mock.js" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\robots.txt" />
+    <Content Include="app\scripts\factories\my-test-repository.js" />
+    <Content Include="app\scripts\models\my-test.js" />
+    <Content Include="app\scripts\models\request.js" />
+    <Content Include="app\scripts\module.js" />
+    <Content Include="app\scripts\repositories\request-repository.js" />
+    <Content Include="app\states\error\index\error.js" />
+    <Content Include="app\states\error\index\main-view.html" />
+    <Content Include="app\states\index\index\index.js" />
+    <Content Include="app\states\index\index\main-view.html" />
+    <Content Include="app\states\request\index\main-view.html" />
+    <Content Include="app\states\request\index\request-controller.js" />
+    <Content Include="app\styles\bootstrap-sass\vendor\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="app\views\angular-busy\default-spinner.html" />
+    <Content Include="bin\Argentiere.PATrading.WebApp.dll" />
+    <Content Include="bin\Argentiere.PATrading.WebApp.pdb" />
+    <Content Include="test\e2e\spec\index.js" />
+    <Content Include="test\unit\loadTemplates.js" />
+    <Content Include="test\unit\matchers\toHaveClass.js" />
+    <Content Include="test\unit\spec\components\navbar.js" />
+    <Content Include="test\unit\spec\models\request.js" />
+    <Content Include="test\unit\spec\repositories\request-repository.js" />
+    <Content Include="test\unit\spec\scripts\models\my-test.js" />
+    <Content Include="test\unit\spec\scripts\repositories\my-test-repository.js" />
+    <Content Include="test\unit\spec\states\error\index\error.js" />
+    <Content Include="test\unit\spec\states\index\index\index.js" />
+    <Content Include="test\unit\spec\states\request\index\request-controller.js" />
+    <Content Include="test\unit\utils\utils.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".bower-registry\bower.herokuapp.com\list\" />
+    <Folder Include=".bower-registry\bower.herokuapp.com\search\" />
+    <Folder Include=".bower-tmp\" />
+    <Folder Include="dist\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9076/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,20 @@
+Version 0.0.4
+==========================
+Split adal.js to adal.js and adal-angular.js
+Fix interceptor reject message
+Use location.path for route params
+Add grunt minify task
+
+Version 0.0.3
+==========================
+Apply changes for DI strict, 
+Token interceptor fixes.
+
+Version 0.0.2
+==========================
+Fix DI strict mode issue for latest version of Angular
+Fix unknown header errors from token interceptor
+
+Version 0.0.1
+==========================
+Preview Release 

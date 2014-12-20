@@ -1,0 +1,5 @@
+<div ng-cloak class="adal-authentication-component">
+    <a class="navbar-link" ng-show="user.isAuthenticated">{{user.userName}}</a>
+    <a ng-click="signOut()" ng-show="user.isAuthenticated">Sign Out</a>
+    <a ng-click="signIn()" ng-hide="user.isAuthenticated">Sign In</a>
+</div>

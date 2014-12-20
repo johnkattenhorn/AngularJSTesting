@@ -1,0 +1,6 @@
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\bin\Argentiere.PATrading.WebApp.dll.config
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\bin\Argentiere.PATrading.WebApp.dll
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\bin\Argentiere.PATrading.WebApp.pdb
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\obj\Debug\Argentiere.PATrading.WebApp.csprojResolveAssemblyReference.cache
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\obj\Debug\Argentiere.PATrading.WebApp.dll
+C:\Development\Workspaces\Argentiere.PATrading\Main\Argentiere.PATrading\Argentiere.PATrading.WebApp\obj\Debug\Argentiere.PATrading.WebApp.pdb
